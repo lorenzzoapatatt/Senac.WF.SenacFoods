@@ -1,4 +1,4 @@
-﻿namespace SenacFoods
+﻿namespace FrmCardapio
 {
     partial class Form1
     {
