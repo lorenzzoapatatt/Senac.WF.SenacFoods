@@ -26,6 +26,9 @@
     <Compile Update="FrmCardapio.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmMesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>

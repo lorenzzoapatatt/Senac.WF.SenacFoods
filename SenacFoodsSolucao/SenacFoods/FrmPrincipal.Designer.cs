@@ -29,57 +29,44 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            button1 = new Button();
-            button2 = new Button();
+            btn = new Button();
             button3 = new Button();
-            button4 = new Button();
+            button2 = new Button();
+            FRMcardapio_Load = new Button();
+            btnFechar = new Button();
+            label1 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
             groupBox1.BackColor = Color.Black;
-            groupBox1.Controls.Add(button4);
+            groupBox1.Controls.Add(btn);
             groupBox1.Controls.Add(button3);
             groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(FRMcardapio_Load);
             groupBox1.ForeColor = Color.White;
-            groupBox1.Location = new Point(40, 77);
+            groupBox1.Location = new Point(122, 107);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(981, 197);
+            groupBox1.Size = new Size(823, 197);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Senac Foods";
             // 
-            // button1
+            // btn
             // 
-            button1.BackColor = Color.FromArgb(255, 128, 0);
-            button1.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 0);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.Black;
-            button1.Location = new Point(22, 30);
-            button1.Name = "button1";
-            button1.Size = new Size(175, 140);
-            button1.TabIndex = 0;
-            button1.Text = "Cardápio";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(255, 128, 0);
-            button2.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 0);
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.Black;
-            button2.Location = new Point(246, 30);
-            button2.Name = "button2";
-            button2.Size = new Size(175, 140);
-            button2.TabIndex = 0;
-            button2.Text = "Cardápio";
-            button2.UseVisualStyleBackColor = false;
+            btn.BackColor = Color.FromArgb(255, 128, 0);
+            btn.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 0);
+            btn.FlatAppearance.BorderSize = 0;
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn.ForeColor = Color.Black;
+            btn.Location = new Point(620, 30);
+            btn.Name = "btn";
+            btn.Size = new Size(175, 140);
+            btn.TabIndex = 0;
+            btn.Text = "Usuário";
+            btn.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -89,27 +76,65 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.Black;
-            button3.Location = new Point(501, 30);
+            button3.Location = new Point(420, 30);
             button3.Name = "button3";
             button3.Size = new Size(175, 140);
             button3.TabIndex = 0;
-            button3.Text = "Cardápio";
+            button3.Text = "Pedido Cozinha";
             button3.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // button2
             // 
-            button4.BackColor = Color.FromArgb(255, 128, 0);
-            button4.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 0);
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.Black;
-            button4.Location = new Point(763, 30);
-            button4.Name = "button4";
-            button4.Size = new Size(175, 140);
-            button4.TabIndex = 0;
-            button4.Text = "Cardápio";
-            button4.UseVisualStyleBackColor = false;
+            button2.BackColor = Color.FromArgb(255, 128, 0);
+            button2.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 0);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.Black;
+            button2.Location = new Point(220, 30);
+            button2.Name = "button2";
+            button2.Size = new Size(175, 140);
+            button2.TabIndex = 0;
+            button2.Text = "Comanda";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // FRMcardapio_Load
+            // 
+            FRMcardapio_Load.BackColor = Color.FromArgb(255, 128, 0);
+            FRMcardapio_Load.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 0);
+            FRMcardapio_Load.FlatAppearance.BorderSize = 0;
+            FRMcardapio_Load.FlatStyle = FlatStyle.Flat;
+            FRMcardapio_Load.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FRMcardapio_Load.ForeColor = Color.Black;
+            FRMcardapio_Load.Location = new Point(20, 30);
+            FRMcardapio_Load.Name = "FRMcardapio_Load";
+            FRMcardapio_Load.Size = new Size(175, 140);
+            FRMcardapio_Load.TabIndex = 0;
+            FRMcardapio_Load.Text = "Cardápio";
+            FRMcardapio_Load.UseVisualStyleBackColor = false;
+            FRMcardapio_Load.Click += FRMcardapio_Load_Click;
+            // 
+            // btnFechar
+            // 
+            btnFechar.Location = new Point(1055, 12);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(27, 34);
+            btnFechar.TabIndex = 5;
+            btnFechar.Text = "X";
+            btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.Click += btnFechar_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Black;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(455, 57);
+            label1.Name = "label1";
+            label1.Size = new Size(142, 32);
+            label1.TabIndex = 6;
+            label1.Text = "lblMessage";
             // 
             // FrmPrincipal
             // 
@@ -117,6 +142,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(1094, 450);
+            Controls.Add(label1);
+            Controls.Add(btnFechar);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmPrincipal";
@@ -124,6 +151,7 @@
             Text = "FrmPrincipal";
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -133,5 +161,9 @@
         private Button button4;
         private Button button3;
         private Button button2;
+        private Button btn;
+        private Button FRMcardapio_Load;
+        private Button btnFechar;
+        private Label label1;
     }
 }

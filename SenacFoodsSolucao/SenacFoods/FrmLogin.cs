@@ -6,5 +6,57 @@ namespace SenacFoods
         {
             InitializeComponent();
         }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            //true, false
+            bool loginValido = ValidarLogin(txtLogin.Text, txtSenha.Text);
+            //se true
+            if (loginValido)
+            {
+                //oculta a tela de login
+                this.Hide();
+                //criar uma instancia de FrmPrincipal
+                var formPrincipal = new FrmPrincipal();
+                //exibe a tela principal
+                formPrincipal.Show();
+            }
+        }
+
+        private bool ValidarLogin(string nome, string senha)
+        {
+            bool usuarioValido = false;
+            //conecta ao banco
+            using (var banco = new ComandaDBContext())
+            {
+                //consultar a tabela usuario select * from usuarios where email = ? and senha = ?
+                var usuario = banco
+                                .Usuarios
+                                .FirstOrDefault(u => u.Email.ToLower() == nome.ToLower() && u.Senha == senha);
+
+                if (usuario is not null)
+                    usuarioValido = true;
+            }
+
+            //se nome é igual a admin e senha igual a 123
+            if (usuarioValido)
+                {
+                    //Retorna verdadeiro
+                    return true;
+                }
+                else
+                {
+                    //exibe mensagem de erro
+                    MessageBox.Show("Login ou senha invalida");
+                } 
+            // retorna false
+            return false;
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
+            Application.Exit();
+        }
     }
 }

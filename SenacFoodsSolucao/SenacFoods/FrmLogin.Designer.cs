@@ -30,11 +30,12 @@
         {
             panel1 = new Panel();
             panel2 = new Panel();
-            txtLogin = new TextBox();
+            btnFechar = new Button();
+            btnEntrar = new Button();
             txtSenha = new TextBox();
+            txtLogin = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            btnEntrar = new Button();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,6 +50,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(btnFechar);
             panel2.Controls.Add(btnEntrar);
             panel2.Controls.Add(txtSenha);
             panel2.Controls.Add(txtLogin);
@@ -60,17 +62,31 @@
             panel2.Size = new Size(648, 482);
             panel2.TabIndex = 1;
             // 
-            // txtLogin
+            // btnFechar
             // 
-            txtLogin.BackColor = Color.Black;
-            txtLogin.BorderStyle = BorderStyle.None;
-            txtLogin.Font = new Font("Century Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtLogin.ForeColor = Color.White;
-            txtLogin.Location = new Point(118, 97);
-            txtLogin.Name = "txtLogin";
-            txtLogin.Size = new Size(412, 45);
-            txtLogin.TabIndex = 0;
-            txtLogin.Text = "USUÁRIO";
+            btnFechar.Location = new Point(609, 12);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(27, 34);
+            btnFechar.TabIndex = 4;
+            btnFechar.Text = "X";
+            btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.Click += btnFechar_Click;
+            // 
+            // btnEntrar
+            // 
+            btnEntrar.FlatAppearance.BorderSize = 0;
+            btnEntrar.FlatAppearance.MouseDownBackColor = Color.White;
+            btnEntrar.FlatAppearance.MouseOverBackColor = Color.Silver;
+            btnEntrar.FlatStyle = FlatStyle.Flat;
+            btnEntrar.Font = new Font("Century Gothic", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEntrar.ForeColor = Color.White;
+            btnEntrar.Location = new Point(118, 335);
+            btnEntrar.Name = "btnEntrar";
+            btnEntrar.Size = new Size(374, 62);
+            btnEntrar.TabIndex = 3;
+            btnEntrar.Text = "Entrar";
+            btnEntrar.UseVisualStyleBackColor = true;
+            btnEntrar.Click += btnEntrar_Click;
             // 
             // txtSenha
             // 
@@ -83,6 +99,18 @@
             txtSenha.Size = new Size(412, 45);
             txtSenha.TabIndex = 0;
             txtSenha.Text = "SENHA";
+            // 
+            // txtLogin
+            // 
+            txtLogin.BackColor = Color.Black;
+            txtLogin.BorderStyle = BorderStyle.None;
+            txtLogin.Font = new Font("Century Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtLogin.ForeColor = Color.White;
+            txtLogin.Location = new Point(118, 97);
+            txtLogin.Name = "txtLogin";
+            txtLogin.Size = new Size(412, 45);
+            txtLogin.TabIndex = 0;
+            txtLogin.Text = "USUÁRIO";
             // 
             // label1
             // 
@@ -105,21 +133,6 @@
             label2.Size = new Size(380, 48);
             label2.TabIndex = 2;
             label2.Text = "________________________";
-            // 
-            // btnEntrar
-            // 
-            btnEntrar.FlatAppearance.BorderSize = 0;
-            btnEntrar.FlatAppearance.MouseDownBackColor = Color.White;
-            btnEntrar.FlatAppearance.MouseOverBackColor = Color.Silver;
-            btnEntrar.FlatStyle = FlatStyle.Flat;
-            btnEntrar.Font = new Font("Century Gothic", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnEntrar.ForeColor = Color.White;
-            btnEntrar.Location = new Point(118, 335);
-            btnEntrar.Name = "btnEntrar";
-            btnEntrar.Size = new Size(374, 62);
-            btnEntrar.TabIndex = 3;
-            btnEntrar.Text = "Entrar";
-            btnEntrar.UseVisualStyleBackColor = true;
             // 
             // FrmLogin
             // 
@@ -147,5 +160,6 @@
         private Label label1;
         private Label label2;
         private Button btnEntrar;
+        private Button btnFechar;
     }
 }
