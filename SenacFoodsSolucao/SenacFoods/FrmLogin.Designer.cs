@@ -99,6 +99,7 @@
             txtSenha.Size = new Size(412, 45);
             txtSenha.TabIndex = 0;
             txtSenha.Text = "SENHA";
+            txtSenha.Enter += txtSenha_Enter;
             // 
             // txtLogin
             // 
@@ -111,6 +112,7 @@
             txtLogin.Size = new Size(412, 45);
             txtLogin.TabIndex = 0;
             txtLogin.Text = "USUÁRIO";
+            txtLogin.Enter += txtLogin_Enter;
             // 
             // label1
             // 

@@ -52,7 +52,7 @@ namespace SenacFoods
             {
                 //abrir o formulario de edição
                 var cardapioEditar = new FrmCardapioCad(cardapioSelecionado);
-                cardapioEditar.ShowDialog();
+                cardapioEditar.Show();
                 //atualizar a lista de cardapios
                 BuscarCardapio();
                 cardapioSelecionado = null;
@@ -81,6 +81,13 @@ namespace SenacFoods
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //button adicionar
+            new FrmCardapioCad().ShowDialog();
+            BuscarCardapio();
         }
     }
 }

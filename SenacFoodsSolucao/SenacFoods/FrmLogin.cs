@@ -40,15 +40,15 @@ namespace SenacFoods
 
             //se nome é igual a admin e senha igual a 123
             if (usuarioValido)
-                {
-                    //Retorna verdadeiro
-                    return true;
-                }
-                else
-                {
-                    //exibe mensagem de erro
-                    MessageBox.Show("Login ou senha invalida");
-                } 
+            {
+                //Retorna verdadeiro
+                return true;
+            }
+            else
+            {
+                //exibe mensagem de erro
+                MessageBox.Show("Login ou senha invalida");
+            }
             // retorna false
             return false;
         }
@@ -57,6 +57,22 @@ namespace SenacFoods
         {
             Close();
             Application.Exit();
+        }
+
+        private void txtLogin_Enter(object sender, EventArgs e)
+        {
+            if (txtLogin.Text == "USUÁRIO")
+            {
+                txtLogin.Text = "";
+            }
+        }
+
+        private void txtSenha_Enter(object sender, EventArgs e)
+        {
+            if (txtSenha.Text == "SENHA")
+            {
+                txtSenha.Text = "";
+            }
         }
     }
 }

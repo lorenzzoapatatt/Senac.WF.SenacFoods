@@ -74,6 +74,7 @@
             button5.TabIndex = 4;
             button5.Text = "+ Item";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // btnExcluir
             // 
