@@ -179,6 +179,7 @@
             ClientSize = new Size(1088, 636);
             Controls.Add(Cardapio);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FrmCardapioCad";
             Text = "FrmCardapioCad";
             panel1.ResumeLayout(false);

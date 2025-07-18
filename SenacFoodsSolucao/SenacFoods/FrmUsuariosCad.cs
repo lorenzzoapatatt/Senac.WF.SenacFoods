@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SenacFoods
 {
-    public partial class FrmUsuario : Form
+    public partial class FrmUsuariosCad : Form
     {
-        public FrmUsuario()
+        public FrmUsuariosCad()
         {
             InitializeComponent();
         }
