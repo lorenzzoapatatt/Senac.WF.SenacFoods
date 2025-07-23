@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            btn = new Button();
+            btnUsuario = new Button();
             button3 = new Button();
             button2 = new Button();
             FRMcardapio_Load = new Button();
@@ -41,7 +41,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.Black;
-            groupBox1.Controls.Add(btn);
+            groupBox1.Controls.Add(btnUsuario);
             groupBox1.Controls.Add(button3);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(FRMcardapio_Load);
@@ -53,20 +53,21 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Senac Foods";
             // 
-            // btn
+            // btnUsuario
             // 
-            btn.BackColor = Color.FromArgb(255, 128, 0);
-            btn.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 0);
-            btn.FlatAppearance.BorderSize = 0;
-            btn.FlatStyle = FlatStyle.Flat;
-            btn.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn.ForeColor = Color.Black;
-            btn.Location = new Point(620, 30);
-            btn.Name = "btn";
-            btn.Size = new Size(175, 140);
-            btn.TabIndex = 0;
-            btn.Text = "Usuário";
-            btn.UseVisualStyleBackColor = false;
+            btnUsuario.BackColor = Color.FromArgb(255, 128, 0);
+            btnUsuario.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 0);
+            btnUsuario.FlatAppearance.BorderSize = 0;
+            btnUsuario.FlatStyle = FlatStyle.Flat;
+            btnUsuario.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnUsuario.ForeColor = Color.Black;
+            btnUsuario.Location = new Point(620, 30);
+            btnUsuario.Name = "btnUsuario";
+            btnUsuario.Size = new Size(175, 140);
+            btnUsuario.TabIndex = 0;
+            btnUsuario.Text = "Usuário";
+            btnUsuario.UseVisualStyleBackColor = false;
+            btnUsuario.Click += btnUsuario_Click;
             // 
             // button3
             // 
@@ -161,7 +162,7 @@
         private Button button4;
         private Button button3;
         private Button button2;
-        private Button btn;
+        private Button btnUsuario;
         private Button FRMcardapio_Load;
         private Button btnFechar;
         private Label label1;

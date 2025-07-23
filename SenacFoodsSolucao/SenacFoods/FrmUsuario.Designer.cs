@@ -33,20 +33,22 @@
             label1 = new Label();
             btnFechar = new Button();
             txtFiltro = new TextBox();
-            button2 = new Button();
+            btnExcluir = new Button();
             btnSalvar = new Button();
             btnEditar = new Button();
+            Usuarios = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
+            Usuarios.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(137, 161);
+            dataGridView1.Location = new Point(27, 44);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(827, 225);
+            dataGridView1.Size = new Size(898, 225);
             dataGridView1.TabIndex = 0;
             // 
             // panel1
@@ -86,35 +88,49 @@
             txtFiltro.Size = new Size(669, 31);
             txtFiltro.TabIndex = 3;
             // 
-            // button2
+            // btnExcluir
             // 
-            button2.BackColor = Color.Red;
-            button2.Location = new Point(852, 442);
-            button2.Name = "button2";
-            button2.Size = new Size(112, 34);
-            button2.TabIndex = 10;
-            button2.Text = "X Cancelar";
-            button2.UseVisualStyleBackColor = false;
+            btnExcluir.BackColor = Color.Red;
+            btnExcluir.Location = new Point(832, 314);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(112, 34);
+            btnExcluir.TabIndex = 10;
+            btnExcluir.Text = "X Excluir";
+            btnExcluir.UseVisualStyleBackColor = false;
             // 
             // btnSalvar
             // 
             btnSalvar.BackColor = Color.YellowGreen;
-            btnSalvar.Location = new Point(734, 442);
+            btnSalvar.Location = new Point(596, 314);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(112, 34);
             btnSalvar.TabIndex = 9;
             btnSalvar.Text = "# Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // btnEditar
             // 
             btnEditar.BackColor = Color.Yellow;
-            btnEditar.Location = new Point(970, 442);
+            btnEditar.Location = new Point(714, 314);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(112, 34);
             btnEditar.TabIndex = 11;
             btnEditar.Text = "@ Editar";
             btnEditar.UseVisualStyleBackColor = false;
+            // 
+            // Usuarios
+            // 
+            Usuarios.Controls.Add(btnExcluir);
+            Usuarios.Controls.Add(btnEditar);
+            Usuarios.Controls.Add(dataGridView1);
+            Usuarios.Controls.Add(btnSalvar);
+            Usuarios.Location = new Point(71, 118);
+            Usuarios.Name = "Usuarios";
+            Usuarios.Size = new Size(950, 354);
+            Usuarios.TabIndex = 12;
+            Usuarios.TabStop = false;
+            Usuarios.Text = "Usuários";
             // 
             // FrmUsuario
             // 
@@ -122,18 +138,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1094, 507);
-            Controls.Add(btnEditar);
-            Controls.Add(button2);
-            Controls.Add(btnSalvar);
+            Controls.Add(Usuarios);
             Controls.Add(panel1);
-            Controls.Add(dataGridView1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmUsuario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmPrincipal";
+            Load += FrmUsuario_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            Usuarios.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -144,8 +159,9 @@
         private Label label1;
         private Button btnFechar;
         private TextBox txtFiltro;
-        private Button button2;
+        private Button btnExcluir;
         private Button btnSalvar;
         private Button btnEditar;
+        private GroupBox Usuarios;
     }
 }
