@@ -136,6 +136,7 @@
             lblMessage.Size = new Size(142, 32);
             lblMessage.TabIndex = 6;
             lblMessage.Text = "lblMessage";
+            lblMessage.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FrmPrincipal
             // 
