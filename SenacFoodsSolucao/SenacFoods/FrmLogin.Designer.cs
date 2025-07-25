@@ -36,6 +36,7 @@
             txtLogin = new TextBox();
             label1 = new Label();
             label2 = new Label();
+            label3 = new Label();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -50,6 +51,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(label3);
             panel2.Controls.Add(btnFechar);
             panel2.Controls.Add(btnEntrar);
             panel2.Controls.Add(txtSenha);
@@ -80,7 +82,7 @@
             btnEntrar.FlatStyle = FlatStyle.Flat;
             btnEntrar.Font = new Font("Century Gothic", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEntrar.ForeColor = Color.White;
-            btnEntrar.Location = new Point(118, 335);
+            btnEntrar.Location = new Point(118, 369);
             btnEntrar.Name = "btnEntrar";
             btnEntrar.Size = new Size(374, 62);
             btnEntrar.TabIndex = 3;
@@ -94,7 +96,7 @@
             txtSenha.BorderStyle = BorderStyle.None;
             txtSenha.Font = new Font("Century Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtSenha.ForeColor = Color.White;
-            txtSenha.Location = new Point(118, 218);
+            txtSenha.Location = new Point(118, 252);
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(412, 45);
             txtSenha.TabIndex = 0;
@@ -107,7 +109,7 @@
             txtLogin.BorderStyle = BorderStyle.None;
             txtLogin.Font = new Font("Century Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtLogin.ForeColor = Color.White;
-            txtLogin.Location = new Point(118, 97);
+            txtLogin.Location = new Point(118, 131);
             txtLogin.Name = "txtLogin";
             txtLogin.Size = new Size(412, 45);
             txtLogin.TabIndex = 0;
@@ -119,7 +121,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(114, 100);
+            label1.Location = new Point(114, 134);
             label1.Name = "label1";
             label1.Size = new Size(380, 48);
             label1.TabIndex = 1;
@@ -130,11 +132,21 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(112, 221);
+            label2.Location = new Point(112, 255);
             label2.Name = "label2";
             label2.Size = new Size(380, 48);
             label2.TabIndex = 2;
             label2.Text = "________________________";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = SystemColors.ButtonHighlight;
+            label3.Location = new Point(106, 55);
+            label3.Name = "label3";
+            label3.Size = new Size(203, 25);
+            label3.TabIndex = 5;
+            label3.Text = "Cadastrar em Sua Conta";
             // 
             // FrmLogin
             // 
@@ -163,5 +175,6 @@
         private Label label2;
         private Button btnEntrar;
         private Button btnFechar;
+        private Label label3;
     }
 }

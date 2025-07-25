@@ -31,7 +31,7 @@
             groupBox1 = new GroupBox();
             btnUsuario = new Button();
             button3 = new Button();
-            button2 = new Button();
+            btnComanda = new Button();
             FRMcardapio_Load = new Button();
             btnFechar = new Button();
             lblMessage = new Label();
@@ -43,7 +43,7 @@
             groupBox1.BackColor = Color.Black;
             groupBox1.Controls.Add(btnUsuario);
             groupBox1.Controls.Add(button3);
-            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(btnComanda);
             groupBox1.Controls.Add(FRMcardapio_Load);
             groupBox1.ForeColor = Color.White;
             groupBox1.Location = new Point(122, 107);
@@ -84,20 +84,21 @@
             button3.Text = "Pedido Cozinha";
             button3.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnComanda
             // 
-            button2.BackColor = Color.FromArgb(255, 128, 0);
-            button2.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 0);
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.Black;
-            button2.Location = new Point(220, 30);
-            button2.Name = "button2";
-            button2.Size = new Size(175, 140);
-            button2.TabIndex = 0;
-            button2.Text = "Comanda";
-            button2.UseVisualStyleBackColor = false;
+            btnComanda.BackColor = Color.FromArgb(255, 128, 0);
+            btnComanda.FlatAppearance.BorderColor = Color.FromArgb(255, 128, 0);
+            btnComanda.FlatAppearance.BorderSize = 0;
+            btnComanda.FlatStyle = FlatStyle.Flat;
+            btnComanda.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnComanda.ForeColor = Color.Black;
+            btnComanda.Location = new Point(220, 30);
+            btnComanda.Name = "btnComanda";
+            btnComanda.Size = new Size(175, 140);
+            btnComanda.TabIndex = 0;
+            btnComanda.Text = "Comanda";
+            btnComanda.UseVisualStyleBackColor = false;
+            btnComanda.Click += btnComanda_Click;
             // 
             // FRMcardapio_Load
             // 
@@ -162,7 +163,7 @@
         private Button button1;
         private Button button4;
         private Button button3;
-        private Button button2;
+        private Button btnComanda;
         private Button btnUsuario;
         private Button FRMcardapio_Load;
         private Button btnFechar;
