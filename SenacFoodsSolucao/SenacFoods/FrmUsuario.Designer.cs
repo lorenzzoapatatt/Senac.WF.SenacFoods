@@ -47,9 +47,11 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(27, 44);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(898, 225);
+            dataGridView1.Size = new Size(898, 332);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // panel1
             // 
@@ -91,17 +93,18 @@
             // btnExcluir
             // 
             btnExcluir.BackColor = Color.Red;
-            btnExcluir.Location = new Point(832, 314);
+            btnExcluir.Location = new Point(832, 399);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(112, 34);
             btnExcluir.TabIndex = 10;
             btnExcluir.Text = "X Excluir";
             btnExcluir.UseVisualStyleBackColor = false;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // btnSalvar
             // 
             btnSalvar.BackColor = Color.YellowGreen;
-            btnSalvar.Location = new Point(596, 314);
+            btnSalvar.Location = new Point(596, 399);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(112, 34);
             btnSalvar.TabIndex = 9;
@@ -112,12 +115,13 @@
             // btnEditar
             // 
             btnEditar.BackColor = Color.Yellow;
-            btnEditar.Location = new Point(714, 314);
+            btnEditar.Location = new Point(714, 399);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(112, 34);
             btnEditar.TabIndex = 11;
             btnEditar.Text = "@ Editar";
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // Usuarios
             // 
@@ -127,7 +131,7 @@
             Usuarios.Controls.Add(btnSalvar);
             Usuarios.Location = new Point(71, 118);
             Usuarios.Name = "Usuarios";
-            Usuarios.Size = new Size(950, 354);
+            Usuarios.Size = new Size(950, 439);
             Usuarios.TabIndex = 12;
             Usuarios.TabStop = false;
             Usuarios.Text = "Usuários";
@@ -137,7 +141,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1094, 507);
+            ClientSize = new Size(1094, 582);
             Controls.Add(Usuarios);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;

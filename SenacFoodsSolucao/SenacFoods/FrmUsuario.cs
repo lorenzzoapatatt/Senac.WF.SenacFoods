@@ -12,6 +12,7 @@ namespace SenacFoods
 {
     public partial class FrmUsuario : Form
     {
+        Usuario? usuarioSelecionado;
         public FrmUsuario()
         {
             InitializeComponent();
@@ -34,6 +35,47 @@ namespace SenacFoods
             }
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                //pegar o usuario selecionado
+                usuarioSelecionado = dataGridView1.Rows[e.RowIndex].DataBoundItem as Usuario;
+                btnEditar.Enabled = true;
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (usuarioSelecionado != null)
+            {
+                //abrir o formulario de edição
+                var usuarioEditar = new FrmUsuariosCad(usuarioSelecionado);
+                usuarioEditar.Show();
+            }
+            //atualizar a lista de cardapios
+            BuscarUsuario();
+            usuarioSelecionado = null;
+        }
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (usuarioSelecionado != null)
+            {
+                using (var bancoDeDados = new ComandaDBContext())
+                {
+                    bancoDeDados.Usuarios.Remove(usuarioSelecionado);
+                    bancoDeDados.SaveChanges();
+                }
+                MessageBox.Show("Cardápio excluído com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BuscarUsuario();
+                usuarioSelecionado = null;
+            }
+            else
+            {
+                MessageBox.Show("Selecione um cardápio para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -45,5 +87,7 @@ namespace SenacFoods
             frmUsuariosCad.ShowDialog();
             BuscarUsuario();
         }
+
+        
     }
 }

@@ -13,16 +13,32 @@ namespace SenacFoods
 {
     public partial class FrmUsuariosCad : Form
     {
+        private Usuario? _usuario;
         public FrmUsuariosCad()
         {
             InitializeComponent();
         }
 
-        private void btnFechar_Click(object sender, EventArgs e)
+        public FrmUsuariosCad(Usuario usuario)
         {
-            this.Close();
+            _usuario = usuario;
+            InitializeComponent();
+
+            //carregar os dados da tela
+            CarregarDadosDaTela();
         }
 
+        private void CarregarDadosDaTela()
+        {
+            //popular os campos de texto e checkbox
+            if (_usuario != null)
+            {
+                txtUsuario.Text = _usuario.Nome;
+                txtEmail.Text = _usuario.Email;
+                txtSenha.Text = _usuario.Senha;
+                txtSenhaConfirmar.Text = _usuario.Senha;
+            }
+        }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             if (ValidarForm())
@@ -31,7 +47,10 @@ namespace SenacFoods
 
         private void SalvarForm()
         {
-            InserirUsuario();
+            if (_usuario != null)
+                AtualizarUsuario();
+            else
+                InserirUsuario();
         }
 
         private bool ValidarForm()
@@ -80,6 +99,25 @@ namespace SenacFoods
             return true;
         }
 
+        private void AtualizarUsuario()
+        {
+            using (var banco = new ComandaDBContext())
+            {
+                string nome = txtUsuario.Text;
+                string email = txtEmail.Text;
+                string senha = txtSenha.Text;
+                string comboboxPerfil = cmbPerfil.Text;
+                _usuario.Nome = nome;
+                _usuario.Email = email;
+                _usuario.Senha = senha;
+                _usuario.Perfil = comboboxPerfil;
+                banco.Usuarios.Update(_usuario);
+                banco.SaveChanges();
+            }
+            MessageBox.Show("Cardápio salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+        }
+
         private void InserirUsuario()
         {
             using (var banco = new ComandaDBContext())
@@ -87,12 +125,14 @@ namespace SenacFoods
                 string nome = txtUsuario.Text;
                 string email = txtEmail.Text;
                 string senha = txtSenha.Text;
+                string comboboxPerfil = cmbPerfil.Text;
 
                 var usu = new Usuario()
                 {
                     Nome = nome,
                     Email = email,
                     Senha = senha,
+                    Perfil = comboboxPerfil,
                     Ativo = true
                 };
 
@@ -103,6 +143,9 @@ namespace SenacFoods
             MessageBox.Show("Usuário salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
-
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

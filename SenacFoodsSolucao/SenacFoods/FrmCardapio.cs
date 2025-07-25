@@ -53,10 +53,10 @@ namespace SenacFoods
                 //abrir o formulario de edição
                 var cardapioEditar = new FrmCardapioCad(cardapioSelecionado);
                 cardapioEditar.Show();
-                //atualizar a lista de cardapios
-                BuscarCardapio();
-                cardapioSelecionado = null;
             }
+            //atualizar a lista de cardapios
+            BuscarCardapio();
+            cardapioSelecionado = null;
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)

@@ -34,7 +34,7 @@
             button2 = new Button();
             FRMcardapio_Load = new Button();
             btnFechar = new Button();
-            label1 = new Label();
+            lblMessage = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -125,17 +125,17 @@
             btnFechar.UseVisualStyleBackColor = true;
             btnFechar.Click += btnFechar_Click;
             // 
-            // label1
+            // lblMessage
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Black;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(455, 57);
-            label1.Name = "label1";
-            label1.Size = new Size(142, 32);
-            label1.TabIndex = 6;
-            label1.Text = "lblMessage";
+            lblMessage.AutoSize = true;
+            lblMessage.BackColor = Color.Black;
+            lblMessage.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMessage.ForeColor = SystemColors.ButtonHighlight;
+            lblMessage.Location = new Point(455, 57);
+            lblMessage.Name = "lblMessage";
+            lblMessage.Size = new Size(142, 32);
+            lblMessage.TabIndex = 6;
+            lblMessage.Text = "lblMessage";
             // 
             // FrmPrincipal
             // 
@@ -143,7 +143,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(1094, 450);
-            Controls.Add(label1);
+            Controls.Add(lblMessage);
             Controls.Add(btnFechar);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.None;
@@ -165,6 +165,6 @@
         private Button btnUsuario;
         private Button FRMcardapio_Load;
         private Button btnFechar;
-        private Label label1;
+        private Label lblMessage;
     }
 }
